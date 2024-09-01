@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar</title>
+</head>
+<body>
+    <canvas id="avatar" width="500" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById("avatar");
+        var ctx = canvas.getContext("2d");
+
+        // CABEZA
+        ctx.beginPath();
+        ctx.arc(200, 150, 50, 0, 2 * Math.PI); 
+        ctx.fillStyle = "#f1c27d"; 
+        ctx.fill();
+
+        // CABELLO
+        ctx.beginPath();
+        ctx.arc(200, 130, 50, Math.PI, 2 * Math.PI, false); 
+        ctx.fillStyle = "#2c1b10"; 
+        ctx.fill();
+
+        // OJOS
+        ctx.beginPath();
+        ctx.arc(180, 140, 10, 0, 2 * Math.PI); 
+        ctx.arc(220, 140, 10, 0, 2 * Math.PI); 
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        // BOCA
+        ctx.beginPath();
+        ctx.arc(200, 170, 10, 0, Math.PI, false);
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        // CUERPO
+        ctx.fillStyle = "#273f73"; 
+        ctx.fillRect(150, 200, 100, 150); 
+
+         // LOGO UABCS
+         var logo = new Image();
+        logo.onload = function() {
+            ctx.drawImage(logo, 205, 210, 40, 40); 
+        };
+        logo.src = 'https://uabcs.mx/assets/images/tail-assets/logo_uabcs.png';
+
+        // BRAZOS
+        ctx.fillStyle = "#273f73";
+        ctx.fillRect(100, 220, 50, 20); 
+        ctx.fillRect(250, 220, 50, 20); 
+
+        // MANOS
+        ctx.beginPath();
+        ctx.arc(100, 230, 10, 0, 2 * Math.PI); 
+        ctx.arc(300, 230, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = "#f1c27d";
+        ctx.fill();
+
+        // PIERNAS
+        ctx.fillStyle = "#267330"; 
+        ctx.fillRect(150, 350, 30, 150); 
+        ctx.fillRect(220, 350, 30, 150); 
+
+        // SOMBRAS
+        ctx.fillStyle = "#385342"; 
+        ctx.fillRect(150, 350, 10, 150); 
+        ctx.fillRect(220, 350, 10, 150);
+
+        // TENIS
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(150, 500, 40, 20); 
+        ctx.fillRect(220, 500, 45, 20);
+
+        // AGUJETAS IZQUIERDAS
+        ctx.fillStyle = "#FFFFFF";
+        ctx.beginPath();
+        ctx.moveTo(160, 505);
+        ctx.lineTo(165, 500);
+        ctx.lineTo(170, 505);
+        ctx.lineTo(165, 510);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(170, 505);
+        ctx.lineTo(175, 500);
+        ctx.lineTo(180, 505);
+        ctx.lineTo(175, 510);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(180, 505);
+        ctx.lineTo(185, 500);
+        ctx.lineTo(190, 505);
+        ctx.lineTo(185, 510);
+        ctx.closePath();
+        ctx.fill();
+
+        // AGUJETAS DERECHAS
+        ctx.fillStyle = "#FFFFFF";
+        ctx.beginPath();
+        ctx.moveTo(230, 505);
+        ctx.lineTo(235, 500);
+        ctx.lineTo(240, 505);
+        ctx.lineTo(235, 510);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(240, 505);
+        ctx.lineTo(245, 500);
+        ctx.lineTo(250, 505);
+        ctx.lineTo(245, 510);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(250, 505);
+        ctx.lineTo(255, 500);
+        ctx.lineTo(260, 505);
+        ctx.lineTo(255, 510);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>
+
+
